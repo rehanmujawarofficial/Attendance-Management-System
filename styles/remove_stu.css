@@ -1,0 +1,133 @@
+/* Global styling */
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #FFF8E1; /* Cream background color */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+
+/* Page heading */
+h2 {
+    color: #C05124; /* Rusty orange color from your example */
+    text-align: center;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* Student entries */
+p {
+    background-color: #FFF3E0; /* Light peach background */
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+p:hover {
+    background-color: #FFE8CC;
+}
+
+/* Student name and reg number styling */
+p span {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Remove link styling */
+a[href*="remove_id"] {
+    color: #FF5252;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+a[href*="remove_id"]:hover {
+    color: #D32F2F;
+    text-decoration: underline;
+}
+
+/* Back link styling */
+a[href*="subject.php"] {
+    display: inline-block;
+    color: #C05124;
+    text-decoration: none;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+}
+
+a[href*="subject.php"]:before {
+    content: "← ";
+}
+
+/* Success message */
+body:contains("✅") {
+    border-left: 4px solid #4CAF50;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    background-color: #E8F5E9;
+    border-radius: 4px;
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 auto 20px auto;
+}
+
+/* Error message */
+body:contains("❌") {
+    border-left: 4px solid #F44336;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    background-color: #FFEBEE;
+    border-radius: 4px;
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 auto 20px auto;
+}
+
+/* No students message */
+p:contains("No students") {
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    border: 1px dashed #ddd;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    p {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    a[href*="remove_id"] {
+        margin-top: 10px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+}

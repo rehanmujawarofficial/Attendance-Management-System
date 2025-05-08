@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #e1f5fe, #81d4fa);
+    padding: 30px;
+    min-height: 100vh;
+    color: #01579b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #0277bd;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  /* Form Styling */
+  form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px 35px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #b3e5fc;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    transition: border 0.3s ease;
+  }
+  
+  form input[type="number"]:focus {
+    border-color: #0288d1;
+    outline: none;
+  }
+  
+  form button {
+    padding: 12px 20px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  form button:hover {
+    background-color: #0277bd;
+    transform: scale(1.05);
+  }
+  
+  /* Back Link */
+  a {
+    margin-top: 15px;
+    text-decoration: none;
+    color: #0288d1;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    transition: color 0.2s;
+  }
+  
+  a:hover {
+    color: #01579b;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    form {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    form input[type="number"] {
+      width: 100%;
+    }
+  
+    form button {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

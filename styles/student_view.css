@@ -1,0 +1,500 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  h2 {
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #3b82f6;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Search Form */
+  form {
+    background: linear-gradient(to right, #ffffff, #f9fafb);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: relative;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 12px 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    min-width: 250px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  button {
+    background: linear-gradient(to bottom right, #3b82f6, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.25);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+  }
+  
+  button:hover {
+    background: linear-gradient(to bottom right, #2563eb, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(37, 99, 235, 0.3);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+  }
+  
+  /* Student Cards */
+  .student-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+    padding: 22px;
+    margin-bottom: 22px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.6);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .student-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+    border-radius: 12px 0 0 12px;
+    opacity: 0.8;
+  }
+  
+  .student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .student-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .student-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e3a8a;
+    letter-spacing: 0.5px;
+  }
+  
+  .student-info {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+    background: #f8fafc;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+  }
+  
+  /* Attendance Section */
+  .attendance-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 18px;
+    background: linear-gradient(to right, #f8fafc, #f1f5f9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+  }
+  
+  .attendance-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease;
+  }
+  
+  .attendance-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  .present {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.1);
+    border: 1px solid rgba(22, 163, 74, 0.2);
+  }
+  
+  .absent {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.2);
+  }
+  
+  .percentage {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+  }
+  
+  /* Marks Section */
+  .marks-section {
+    margin-bottom: 18px;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+  }
+  
+  .marks-header {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1e3a8a;
+    font-size: 16px;
+    position: relative;
+    padding-left: 12px;
+  }
+  
+  .marks-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 18px;
+    background: #3b82f6;
+    border-radius: 2px;
+  }
+  
+  .semester-marks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .semester {
+    background: #f1f5f9;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+  }
+  
+  .semester:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .cgpa {
+    font-weight: 600;
+    font-size: 18px;
+    color: #1e3a8a;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .cgpa::before {
+    content: '📊';
+    font-size: 20px;
+  }
+  
+  /* Performance Indicator */
+  .performance-indicator {
+    height: 10px;
+    width: 100%;
+    background: #e2e8f0;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .performance-bar {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+  }
+  
+  .excellent {
+    background: linear-gradient(to right, #16a34a, #22c55e);
+  }
+  
+  .good {
+    background: linear-gradient(to right, #22c55e, #84cc16);
+  }
+  
+  .average {
+    background: linear-gradient(to right, #eab308, #f59e0b);
+  }
+  
+  .poor {
+    background: linear-gradient(to right, #dc2626, #ef4444);
+  }
+  
+  /* Actions */
+  .student-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .action-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: linear-gradient(to bottom, #3b82f6, #2563eb);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    border: none;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .action-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+  }
+  
+  .action-link:hover::before {
+    left: 100%;
+  }
+  
+  .action-link:hover {
+    background: linear-gradient(to bottom, #2563eb, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(37, 99, 235, 0.3);
+  }
+  
+  .action-link:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+  }
+  
+  /* Back Link */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    background: white;
+  }
+  
+  .back-link:hover {
+    color: #1d4ed8;
+    background: #f8fafc;
+    transform: translateX(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  .back-link::before {
+    content: '⬅';
+    margin-right: 8px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .back-link:hover::before {
+    transform: translateX(-3px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      padding: 15px;
+    }
+    
+    .student-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .attendance-section {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .semester-marks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    
+    .semester {
+      text-align: center;
+    }
+    
+    form {
+      flex-direction: column;
+    }
+    
+    button {
+      width: 100%;
+    }
+  }
+  
+  /* No Results */
+  .no-results {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    color: #64748b;
+    margin-top: 20px;
+    border: 1px dashed #cbd5e1;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .no-results::before {
+    content: '🔍';
+    display: block;
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+  
+  /* Loading Animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
+  /* Toast Notification Style */
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1e3a8a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: toastIn 0.3s forwards, toastOut 0.3s forwards 3s;
+  }
+  
+  @keyframes toastIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes toastOut {
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }

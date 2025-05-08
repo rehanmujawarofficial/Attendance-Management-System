@@ -1,0 +1,162 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #e1f5fe, #81d4fa);
+    padding: 30px;
+    min-height: 100vh;
+    color: #01579b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #0277bd;
+    text-align: center;
+}
+
+/* Search & Filter Form */
+form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #b3e5fc;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: 150px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 10px;
+}
+
+form button:hover {
+    background-color: #0277bd;
+}
+
+a button {
+    padding: 10px 20px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+a button:hover {
+    background-color: #0277bd;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #0288d1;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+table tr:hover {
+    background-color: #d1e7f3;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 25px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0277bd;
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0288d1;
+}
+
+a:hover {
+    color: #01579b;
+    text-decoration: underline;
+}
+
+/* Show All Teachers Link */
+p {
+    margin-top: 15px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form input, form button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

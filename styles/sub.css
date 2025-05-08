@@ -1,0 +1,228 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  h2 {
+    color: #1e3a8a;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #3b82f6;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 60px;
+    height: 3px;
+    background: #1d4ed8;
+    border-radius: 3px;
+  }
+  
+  /* Menu */
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    margin: 30px 0;
+  }
+  
+  li {
+    transition: all 0.3s ease;
+  }
+  
+  li:hover {
+    transform: translateY(-5px);
+  }
+  
+  li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #ffffff;
+    color: #1e3a8a;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.6);
+    height: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+    opacity: 0.8;
+    transition: width 0.3s ease;
+  }
+  
+  li a:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+    color: #1d4ed8;
+  }
+  
+  li a:hover::before {
+    width: 7px;
+  }
+  
+  /* Icons */
+  li a::after {
+    content: attr(data-icon);
+    display: block;
+    font-size: 36px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  li:nth-child(1) a::after {
+    content: '✅';
+  }
+  
+  li:nth-child(2) a::after {
+    content: '🔍';
+  }
+  
+  li:nth-child(3) a::after {
+    content: '➕';
+  }
+  
+  li:nth-child(4) a::after {
+    content: '➖';
+  }
+  
+  li a:hover::after {
+    transform: scale(1.2);
+  }
+  
+  /* Back Link */
+  a[href="dashboard.php"] {
+    display: inline-flex;
+    align-items: center;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    background: white;
+  }
+  
+  a[href="dashboard.php"]:hover {
+    color: #1d4ed8;
+    background: #f8fafc;
+    transform: translateX(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  a[href="dashboard.php"]::before {
+    content: '⬅';
+    margin-right: 8px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  a[href="dashboard.php"]:hover::before {
+    transform: translateX(-3px);
+  }
+  
+  /* Card Hover Effects */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+    50% {
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.1);
+    }
+    100% {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+  }
+  
+  li:hover a {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      padding: 15px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    ul {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    li a {
+      padding: 20px 15px;
+      flex-direction: row;
+      justify-content: flex-start;
+      text-align: left;
+    }
+    
+    li a::after {
+      font-size: 24px;
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }

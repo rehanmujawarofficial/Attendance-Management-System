@@ -1,0 +1,121 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fffde7, #ffe082);
+    color: #333;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #bf360c;
+    text-shadow: 1px 1px 2px #ffccbc;
+    text-align: center;
+  }
+  
+  /* Form container */
+  form {
+    background-color: #ffffffcc;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Date input */
+  label input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ffcc80;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Student section */
+  p {
+    background-color: #fff3e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 138, 101, 0.2);
+    transition: 0.3s;
+  }
+  
+  p:hover {
+    background-color: #ffe0b2;
+  }
+  
+  p label {
+    margin-right: 15px;
+    font-weight: 500;
+  }
+  
+  /* Submit button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7043;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #e64a19;
+    box-shadow: 0 6px 12px rgba(230, 74, 25, 0.4);
+  }
+  
+  /* Back link */
+  a {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    color: #bf360c;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #d84315;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    form {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    p {
+      font-size: 0.95rem;
+    }
+  
+    button[type="submit"] {
+      font-size: 0.95rem;
+      padding: 10px;
+    }
+  }
+  
