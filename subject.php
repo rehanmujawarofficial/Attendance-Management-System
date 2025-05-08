@@ -23,15 +23,41 @@ if ($result->num_rows === 0) {
 
 $subject = $result->fetch_assoc();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo htmlspecialchars($subject['name']); ?> - Subject Management</title>
+    <link rel="stylesheet" href="../styles/sub.css">
+</head>
+<body>
+    <h2><?php echo htmlspecialchars($subject['name']); ?></h2>
 
-<h2><?php echo htmlspecialchars($subject['name']); ?></h2>
+    <!-- Menu -->
+    <ul>
+        <li>
+            <a href="attendance.php?subject_id=<?php echo $subject_id; ?>">
+                Take Attendance
+            </a>
+        </li>
+        <li>
+            <a href="view_students.php?subject_id=<?php echo $subject_id; ?>">
+                View Students
+            </a>
+        </li>
+        <li>
+            <a href="add_student.php?subject_id=<?php echo $subject_id; ?>">
+                Add Student
+            </a>
+        </li>
+        <li>
+            <a href="remove_student.php?subject_id=<?php echo $subject_id; ?>">
+                Remove Student
+            </a>
+        </li>
+    </ul>
 
-<!-- Menu -->
-<ul>
-    <li><a href="attendance.php?subject_id=<?php echo $subject_id; ?>">✅ Take Attendance</a></li>
-    <li><a href="view_students.php?subject_id=<?php echo $subject_id; ?>">🔍 View Students</a></li> 
-    <li><a href="add_student.php?subject_id=<?php echo $subject_id; ?>">➕ Add Student</a></li>
-    <li><a href="remove_student.php?subject_id=<?php echo $subject_id; ?>">➖ Remove Student</a></li>
-</ul>
-
-<a href="dashboard.php">⬅ Back to Dashboard</a>
+    <a href="dashboard.php">Back to Dashboard</a>
+</body>
+</html>

@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$dbname = 'branch_portal';
+$dbname = 'gptmudhol';
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 

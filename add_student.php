@@ -36,15 +36,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+<link rel="stylesheet" href="../styles/add_stu.css">
 
-<h2>Add Student</h2>
-<form method="POST">
-    <input type="text" name="name" placeholder="Student Name" required><br><br>
-    <input type="text" name="reg_number" placeholder="Reg Number" required><br><br>
-    <input type="text" name="phone" placeholder="Phone Number" required><br><br>
-    <button type="submit">Add Student</button>
-</form>
-
-<br>
-<a href="subject.php?id=<?php echo $subject_id; ?>">⬅ Back to Subject</a>
-<br><br>
+<div class="container">
+    <h2>Add Student</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Student Name" required><br>
+        <input type="text" name="reg_number" placeholder="Reg Number" required><br>
+        <input type="text" name="phone" placeholder="Phone Number" required><br>
+        <button type="submit">Add Student</button>
+    </form>
+    <br>
+    <a href="subject.php?id=<?php echo $subject_id; ?>">⬅ Back to Subject</a>
+</div>

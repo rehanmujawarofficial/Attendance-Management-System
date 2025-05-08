@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+<link rel="stylesheet" href="../styles/attendance.css">
 <h2>Attendance - <?php echo htmlspecialchars($subject['name']); ?></h2>
 
 <form method="POST">

@@ -20,11 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+<link rel="stylesheet" href="../styles/login.css">
 
+<section>
+<div class="login-container">
 <form method="POST">
     <h2>Login</h2>
     <input type="email" name="email" placeholder="Email" required><br>
     <input type="password" name="password" placeholder="Password" required><br>
     <button type="submit">Login</button>
+    <a href="register.php">Don't have an account? Register</a>
 </form>
-<a href="register.php">Don't have an account? Register</a>
+</div>
+</select>
+

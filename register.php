@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-
+<link rel="stylesheet" href="../styles/login.css">
 <form method="POST">
     <h2>Register</h2>
     <input type="text" name="name" placeholder="Name" required><br>

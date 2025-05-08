@@ -9,12 +9,14 @@ if (!isset($_SESSION['teacher_id'])) {
 
 $teacher_id = $_SESSION['teacher_id'];
 
-// Fetch subjects of this teacher
+// Fetch subjects
 $sql = "SELECT * FROM subjects WHERE teacher_id = $teacher_id";
 $result = $conn->query($sql);
 ?>
 
-<h2>Welcome, Teacher</h2>
+<h2>Welcome</h2>
+<link rel="stylesheet" href="../styles/dash.css">
+
 
 <!-- Add Subject Form -->
 <form method="POST" action="add_subject.php">
@@ -25,13 +27,18 @@ $result = $conn->query($sql);
 <!-- Subject List -->
 <h3>Your Subjects:</h3>
 <ul>
-    <?php while ($row = $result->fetch_assoc()) { ?>
-        <li>
-            <?php echo $row['name']; ?>
-            <a href="subject.php?id=<?php echo $row['id']; ?>">[Manage]</a>
-            <a href="remove_subject.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure?')">[Remove]</a>
-        </li>
-    <?php } ?>
+<?php while ($row = $result->fetch_assoc()) { ?>
+    <li>
+        <?php echo htmlspecialchars($row['name']); ?>
+        <a href="subject.php?id=<?php echo $row['id']; ?>">[Manage]</a>
+        <a href="remove_subject.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this subject?')">[Remove]</a>
+    </li>
+<?php } ?>
+<div class="buttons">
+  <a href="logout.php">Logout</a>
+  <a href="old_student.php">View Old Student Data</a>
+</div>
 </ul>
 
-<a href="logout.php">Logout</a>
+
+
