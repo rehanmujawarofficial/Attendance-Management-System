@@ -4,8 +4,8 @@
 ### ✅ Step 1: Create the Database
 
 ```sql
-CREATE DATABASE IF NOT EXISTS gptmudhol;
-USE gptmudhol;
+CREATE DATABASE IF NOT EXISTS branch_portal;
+USE branch_portal;
 ```
 
 ---
